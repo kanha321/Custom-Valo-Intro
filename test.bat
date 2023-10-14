@@ -1,0 +1,1 @@
+echo hello & @REM this is a comment
