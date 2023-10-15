@@ -18,11 +18,6 @@ if not %value%=="default" (
         cd %value%
         goto :findVideo
     )
-) else (
-    echo.
-    echo No Custom Path Found
-    echo.
-    echo Going to default path...
 )
 
 for /f "tokens=2 delims==" %%i in (
