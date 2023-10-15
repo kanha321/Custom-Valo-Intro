@@ -2,18 +2,18 @@
 
 color 0a
 
-@REM set "processName=RiotClientServices.exe"
+set "processName=RiotClientServices.exe"
 
-@REM tasklist /fi "ImageName eq %processName%" /fo csv 2>NUL | find /I "%processName%">NUL
+tasklist /fi "ImageName eq %processName%" /fo csv 2>NUL | find /I "%processName%">NUL
 
-@REM if not "%ERRORLEVEL%"=="0" (
-@REM     echo.
-@REM     color 04
-@REM     echo Riot Client is not running.
-@REM     echo Launch Riot Client and then run this script again.
-@REM     pause
-@REM     exit
-@REM )
+if not "%ERRORLEVEL%"=="0" (
+    echo.
+    color 04
+    echo Riot Client is not running.
+    echo Launch Riot Client and then run this script again.
+    pause
+    exit
+)
 
 for /f "delims=" %%i in ('dir /b /a-d *.mp4 ^| find /v /c ""') do (
     set "count=%%i"
