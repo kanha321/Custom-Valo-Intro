@@ -13,8 +13,8 @@ set "customPath=K:\Riot Games\VALORANT\live\ShooterGame\Content\Movies\Menu"
 
 @REM example: set "customPath=C:\Riot Games\VALORANT\live\ShooterGame\Content\Movies\Menu"
 
-
-
+@REM you can add your shortcut path to VALORANT here
+set "shortCutPath=C:\Users\Public\Desktop\VALORANT.lnk" & @REM incomplete
 
 @REM do not edit below this line
 

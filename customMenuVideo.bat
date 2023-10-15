@@ -1,5 +1,7 @@
 @echo off
 
+color 0a
+
 for /f "delims=" %%i in ('dir /b /a-d *.mp4 ^| find /v /c ""') do (
     set "count=%%i"
 )
@@ -8,6 +10,7 @@ set "myDir=%cd%"
 
 cd shits
 echo.
+dir
 call getVideoFilePath.bat
 
 cd ..
