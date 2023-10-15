@@ -12,10 +12,7 @@ if not %value%=="default" (
         echo.
         echo Going to your specified path... 
 
-        for /f "tokens=1 delims=\" %%a in ("%value%") do set "driveLetter=%%a"
-
-        %driveLetter%
-        cd %value%
+        cd /d %value%
         goto :findVideo
     )
 )
@@ -46,24 +43,25 @@ if exist "VALORANT" (
 cd "live\ShooterGame\Content\Movies\Menu"
 
 :findVideo
-pause
 
 echo.
 echo finding HomeScreen*.mp4 in: %cd%
+echo.
 
 if exist "HomeScreen*.mp4" (
     echo Home Screen Video Found
-    pause
 
     for /f "delims=" %%i in ('dir /b *.mp4') do (
         set "mp4File=%%i"
     )
 ) else (
-    echo ERROR...
     color 04
+    echo ERROR...
     echo Home Screen Video Not Found
-    echo Go to path.bat txt and add your custom path there
+    echo.
+    echo Opening path.txt file add your path there
     pause
+    start notepad %myDir%\path.txt
     exit
 )
 

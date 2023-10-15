@@ -2,11 +2,13 @@
 setlocal enabledelayedexpansion
 
 set "variable=%1"
+
 cd ..
-set "file=%cd%\path.txt"
+
+set "file=%mydir%\path.txt"
 
 set "found="
-for /f "tokens=1,2 delims==""" %%a in ('findstr /i %variable% %file%') do (
+for /f "tokens=1,2 delims==" %%a in ('findstr /i %variable% %file%') do (
     if /i "%%a"=="%variable%" (
         set "value=%%b"
         set "found=1"
@@ -21,7 +23,9 @@ if not defined found (
     echo try again, and this time dont change variable name
     call shits/recreatePathTxt.bat %file%
     pause
+    start notepad %myDir%\path.txt
     exit
 )
-cd shits
+
+cd %myShits%
 endlocal & set "value=%value%"

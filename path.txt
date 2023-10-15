@@ -1,5 +1,7 @@
 // This is a simple txt file where you can specify your paths if you are having some trouble with the script
 // Set "default" or "0" for default values
 
-menu_folder="0"
+menu_folder="default"
 valorant_shortcut="default"
+
+// there is no need of adding valorant_shortcut if you have shortcut on your desktop
