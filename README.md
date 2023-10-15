@@ -21,5 +21,5 @@ This is a simple script that replaces the HomeScreen video with your custom vide
 
 ## INSTALLATION
 
-1. Best way is to just clone the repo.
-2. OR You can also download the zip file from release section and extract it.
+1. If you have git then just `git clone https://github.com/kanha321/The-Binary-Bliss/` in your terminal/Powershell/CMD.
+2. OR You can also download the zip file from release section and extract it (Not recommended but it will work).
