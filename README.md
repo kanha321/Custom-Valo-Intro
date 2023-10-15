@@ -11,7 +11,7 @@ This is a simple script that replaces the HomeScreen video with your custom vide
 ## INSTRUCTIONS
 1. Copy and paste your video file in the same directory as the script.
 
-2. Launch Riot Client and Update the game (if needed).
+2. Launch Riot Client if update is available then update the game, riot client should be running while script is running.
 
 3. Launch the script if you have only one video then you don't need to do anything, but if you have multiple videos then you need to enter the name of the video file (you can just triple left click on the video file name to select and then double right click to copy and paste it)
 
