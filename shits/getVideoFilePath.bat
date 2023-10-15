@@ -26,11 +26,8 @@ for /f "tokens=2 delims==" %%i in (
 echo This is location of your RiotClientServices.exe file: %riotClientPath%
 
 for %%a in ("%riotClientPath%") do set "riotClientPath=%%~dpa"
-for /f "tokens=1 delims=\" %%a in ("%riotClientPath%") do set "driveLetter=%%a"
 
-
-%driveLetter%
-cd %riotClientPath%
+cd /d %riotClientPath%
 cd ..
 
 if exist "VALORANT" (
