@@ -1,19 +1,14 @@
-# Custom-Valo-Intro
-a simple script for windows to change the homescreen mp4 video of valorant to your choice
+# THE BINARY BLISS
+A simple script for windows to change the homescreen mp4 video of valorant to your choice
 
-
-**INSTRUCTIONS**
-
-Valorant - Custom Home Screen Video
+Valorant - Home Screen Customizer
 
 This is a simple script that replaces the HomeScreen video with your custom video. This script can find the Valorant directory automatically, you just need to paste your video file in the same directory as the script.
 
-
-> WARNING: STAY AWAY FROM FOLDER
-
+**WARNING: STAY AWAY FROM FOLDER**
 
 
-# How to use
+**INSTRUCTIONS**
 1. Copy and paste your video file in the same directory as the script.
 
 2. Launch Riot Client and Update the game (if needed).
