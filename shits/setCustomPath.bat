@@ -1,13 +1,17 @@
-@echo OFF
+@echo off
+
+setlocal enabledelayedexpansion
 
 set "value=%1"
 
-echo going to your specified path...
+set "value=!value:~1,-1!"
+
+echo Found Custom Path: %value%
+echo.
+echo Going to your specified path... 
 
 for /f "tokens=1 delims=\" %%a in ("%value%") do set "driveLetter=%%a"
 
 %driveLetter%
 cd %value%
-
-echo %cd%
 pause

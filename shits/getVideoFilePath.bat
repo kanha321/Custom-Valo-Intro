@@ -2,9 +2,6 @@
 
 setlocal enabledelayedexpansion
 
-echo at customMenu%cd%
-pause
-
 call readvar menu_folder
 
 if not %value%=="default" (
@@ -49,13 +46,14 @@ echo finding HomeScreen*.mp4 in: %cd%
 
 if exist "HomeScreen*.mp4" (
     echo Home Screen Video Found
+    pause
 
     for /f "delims=" %%i in ('dir /b *.mp4') do (
         set "mp4File=%%i"
     )
 ) else (
     echo ERROR...
-    color 0c
+    color 04
     echo Home Screen Video Not Found
     echo Go to path.bat txt and add your custom path there
     pause

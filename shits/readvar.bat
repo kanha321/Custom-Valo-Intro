@@ -10,7 +10,6 @@ for /f "tokens=1,2 delims==""" %%a in ('findstr /i %variable% %file%') do (
     if /i "%%a"=="%variable%" (
         set "value=%%b"
         set "found=1"
-        echo !value!
     )
 )
 
