@@ -5,7 +5,7 @@ Valorant - Home Screen Customizer
 
 This is a simple script that replaces the HomeScreen video with your custom video. This script can find the Valorant directory automatically, you just need to paste your video file in the same directory as the script.
 
-**WARNING: STAY AWAY FROM FOLDER**
+**WARNING: STAY AWAY FROM "SHITS" FOLDER**
 
 
 **INSTRUCTIONS**
