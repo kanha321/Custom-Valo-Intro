@@ -7,6 +7,7 @@ set "count=%1"
 if %count%==0 (
     echo no mp4 files found
     echo exiting...
+    pause
     exit
 ) else if %count%==1 (
     for /f "delims=" %%i in ('dir /b *.mp4') do (

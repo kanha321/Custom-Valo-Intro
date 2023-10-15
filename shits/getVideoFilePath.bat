@@ -5,13 +5,24 @@ setlocal enabledelayedexpansion
 call readvar menu_folder
 
 if not %value%=="default" (
-    call setCustomPath.bat %value%
-    goto :findVideo
-)
+    if not %value%=="0"  ( 
+        set "value=!value:~1,-1!"
 
-if not %value%=="0" (
-    call setCustomPath.bat %value%
-    goto :findVideo
+        echo Found Custom Path: %value%
+        echo.
+        echo Going to your specified path... 
+
+        for /f "tokens=1 delims=\" %%a in ("%value%") do set "driveLetter=%%a"
+
+        %driveLetter%
+        cd %value%
+        goto :findVideo
+    )
+) else (
+    echo.
+    echo No Custom Path Found
+    echo.
+    echo Going to default path...
 )
 
 for /f "tokens=2 delims==" %%i in (
@@ -40,6 +51,7 @@ if exist "VALORANT" (
 cd "live\ShooterGame\Content\Movies\Menu"
 
 :findVideo
+pause
 
 echo.
 echo finding HomeScreen*.mp4 in: %cd%

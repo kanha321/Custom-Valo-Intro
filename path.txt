@@ -1,5 +1,5 @@
 // This is a simple txt file where you can specify your paths if you are having some trouble with the script
 // Set "default" or "0" for default values
 
-menu_folder="K:\Riot Games\VALORANT\live\ShooterGame\Content\Movies\Menu"
+menu_folder="0"
 valorant_shortcut="default"
