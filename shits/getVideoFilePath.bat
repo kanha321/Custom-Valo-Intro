@@ -41,8 +41,7 @@ cd ..
 if exist "VALORANT" (
     cd VALORANT
 ) else (
-    echo.
-    echo VALORANT folder not found
+    echo is this your path?
 )
 
 :findVideo
@@ -62,9 +61,9 @@ if exist "HomeScreen*.mp4" (
 ) else (
     color 04
     echo ERROR...
-    echo Home Screen Video Not Found
+    echo Wrong Path
     echo.
-    echo Opening path.txt file add your path there
+    echo Opening path.txt file, add your path there "e.g. K:\...\VALORANT"
     pause
     start notepad %myDir%\path.txt
     exit

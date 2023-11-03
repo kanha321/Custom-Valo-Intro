@@ -7,17 +7,22 @@ if not defined launchable (
 )
 
 if exist shits\riotClientPath.txt (
-
-    echo Riot client is not running
-    echo.
-    echo Launching Riot client...
-    echo.
-    
     for /f "delims=" %%a in (shits\riotClientPath.txt) do (
-        set "riotClient=%%a"
+        if exist "%%a" (
+            echo Riot client is not running
+            echo.
+            echo Launching Riot client...
+            echo.
+            start "" "%%a"
+        ) else (
+            color 04
+            echo Riot client is not running
+            echo.
+            echo Please run the script again after running the riot client
+            pause
+            exit
+        )
     )
-    start "" "%riotClient%"
-    echo %riotClient%
     echo Wait for Riot client to launch then press any key to continue...
     echo update first if needed.
     echo.
