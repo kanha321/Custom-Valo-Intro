@@ -2,6 +2,12 @@
 
 setlocal enabledelayedexpansion
 
+if not defined launchable (
+    echo This file is not meant to be run directly
+    pause
+    goto :EOF
+)
+
 set "count=%1"
 
 if %count%==0 (
