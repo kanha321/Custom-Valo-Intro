@@ -1,5 +1,11 @@
 @echo off
 
+if not defined launchable (
+    echo This file is not meant to be run directly
+    pause
+    goto :EOF
+)
+
 call shits\readvar valorant_shortcut
 
 set "path=%value%"

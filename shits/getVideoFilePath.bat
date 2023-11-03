@@ -2,7 +2,13 @@
 
 setlocal enabledelayedexpansion
 
-call readvar menu_folder
+if not defined launchable (
+    echo This file is not meant to be run directly
+    pause
+    goto :EOF
+)
+
+call readvar valorant_folder
 
 if not %value%=="default" (
     if not %value%=="0"  ( 
@@ -25,12 +31,11 @@ for /f "tokens=2 delims==" %%i in (
 
 echo This is location of your RiotClientServices.exe file: %riotClientPath%
 
+echo %riotClientPath%>riotClientPath.txt
+
 for %%a in ("%riotClientPath%") do set "riotClientPath=%%~dpa"
-for /f "tokens=1 delims=\" %%a in ("%riotClientPath%") do set "driveLetter=%%a"
 
-
-%driveLetter%
-cd %riotClientPath%
+cd /d %riotClientPath%
 cd ..
 
 if exist "VALORANT" (
@@ -40,9 +45,9 @@ if exist "VALORANT" (
     echo VALORANT folder not found
 )
 
-cd "live\ShooterGame\Content\Movies\Menu"
-
 :findVideo
+
+cd "live\ShooterGame\Content\Movies\Menu"
 
 echo.
 echo finding HomeScreen*.mp4 in: %cd%

@@ -19,17 +19,15 @@ echo "                        |______/  \_)|_|(___/ (___/                       
 echo "                                                                            "
 echo """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
+set launchable=1
+
 set "processName=RiotClientServices.exe"
 
 tasklist /fi "ImageName eq %processName%" /fo csv 2>NUL | find /I "%processName%">NUL
 
 if not "%ERRORLEVEL%"=="0" (
     echo.
-    color 04
-    echo Riot Client is not running.
-    echo Launch Riot Client and then run this script again.
-    pause
-    exit
+    call shits\launchRiotClient.bat
 )
 
 for /f "delims=" %%i in ('dir /b /a-d *.mp4 ^| find /v /c ""') do (
