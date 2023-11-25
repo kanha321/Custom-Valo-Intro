@@ -52,7 +52,7 @@ echo.
 echo finding HomeScreen*.mp4 in: %cd%
 echo.
 
-if exist "HomeScreen*.mp4" (
+if exist "*HomeScreen*.mp4" (
     echo Home Screen Video Found
 
     for /f "delims=" %%i in ('dir /b *.mp4') do (
