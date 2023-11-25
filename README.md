@@ -19,6 +19,7 @@ This is a simple script that replaces the HomeScreen video with your custom vide
 
 5. The script will close automatically after all these shits...
 
+
 **IF YOUR GAME IS NOT IN SAME FOLDER AS THE RIOT CLIENT THEN YOU NEED TO ENTER THE PATH OF THE GAME DIRECTORY MANUALLY IN `path.txt` FILE**
 
 ## INSTALLATION
